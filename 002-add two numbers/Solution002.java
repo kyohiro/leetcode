@@ -10,37 +10,33 @@
  * }
  */
 
-//Try1: 396ms
+//Attempt1: 396ms
+//Attempt2: 417ms
 public class Solution002 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode result = new ListNode(0);
-        ListNode ll1 = l1, ll2 = l2, llc = result;
-        int bonus = 0;
-        while (ll1 != null || ll2 != null) {
-            int value = 0;
-            if (ll1 != null) {
-                value += ll1.val;
-                ll1 = ll1.next;
-            }
-            if (ll2 != null) {
-                value += ll2.val;
-                ll2 = ll2.next;
-            }
-            value += bonus;
+        ListNode head = new ListNode(0), current = head;
+        int step = 0;
 
-            bonus = value / 10;
-            llc.val = value % 10;
-            if (ll1 != null || ll2 != null) {
-                ListNode next = new ListNode(0);
-                llc.next = next;
-                llc = next;
+        while (l1 != null || l2 != null || step != 0) {
+            int value = step;
+            if (l1 != null) {
+                value += l1.val;
+                l1 = l1.next;
             }
-            else if (bonus != 0) {
-                ListNode next = new ListNode(bonus);
-                llc.next = next;
+            if (l2 != null) {
+                value += l2.val;
+                l2 = l2.next;
+            }
+
+            step = value / 10;
+            current.val = value % 10;
+            if (l1 != null || l2 != null || step != 0) {
+                ListNode next = new ListNode(0);
+                current.next = next;
+                current = next;
             }
         }
 
-        return result;
+        return head;
     }
 }
