@@ -13,15 +13,15 @@ public:
 	vector<int> twoSum(vector<int> &numbers, int target) {
 		map<int, int> numbersMap;
 		for (auto idx = 0; idx != numbers.size(); ++idx) 
-			numbersMap.insert(pair<int, int>(numbers[idx], idx + 1));
+			numbersMap.insert(pair<int, int>(numbers[idx], idx));
 
 		for (auto idx = 0; idx != numbers.size(); ++idx) {
 			int remaining = target - numbers[idx];
 			auto findTarget = numbersMap.find(remaining);
 			if (findTarget != numbersMap.end()) {
 				int secondIdx = findTarget->second;
-				if (idx + 1 != secondIdx) {
-					vector<int> result{ idx + 1, secondIdx };
+				if (idx != secondIdx) {
+					vector<int> result{ idx + 1, secondIdx + 1 };
 					sort(result.begin(), result.end());
 					return result;
 				}
