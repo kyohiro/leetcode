@@ -9,7 +9,7 @@ class Solution {
 public:
 	//Attempt1: 40ms 
 	//This solution is problematic cause using map will override the first element's index if there're duplicates 
-	//But it appears to be correct as it says there'd be only solution
+	//But it appears to be correct as it says there'd be only one solution
 	vector<int> twoSum(vector<int> &numbers, int target) {
 		map<int, int> numbersMap;
 		for (auto idx = 0; idx != numbers.size(); ++idx) 
