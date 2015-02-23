@@ -4,6 +4,8 @@ import java.util.Map;
 public class Solution001 {
     //Attempt1: 249ms
     //Attempt2: 225ms
+    //Java HashMap will drop the previous one when inserting duplicate keys
+    //So this solution appears to be correct only when surfing from the beginning and finding the latter target from the map
     public int[] twoSum(int[] numbers, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < numbers.length; ++i)
