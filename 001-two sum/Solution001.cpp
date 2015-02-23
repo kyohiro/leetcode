@@ -27,6 +27,8 @@ public:
         }
       }
     }
+    
+    throw "No valid solution for input.";
   }
 
   //Attempt2: 33ms
