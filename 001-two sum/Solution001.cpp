@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Solution {
+class Solution001 {
 public:
   //Attempt1: 40ms
   //std::map does not accept duplicate keys, so if the answer is two same elements
@@ -55,7 +55,7 @@ public:
 int main()
 {
   vector<int> numbers{ -1, -2, -3, -4, -5 };
-  Solution s;
+  Solution001 s;
   vector<int> ret = s.twoSum(numbers, -8);
 
   return 0;
