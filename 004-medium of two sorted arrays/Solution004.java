@@ -1,7 +1,8 @@
 import java.util.Arrays;
 
-public class Solution002 {
-    //O(m) solution
+public class Solution004 {
+    //Attempt1: 420ms
+    //O(m+n) solution
     public double findMedianSortedArrays1(int A[], int B[]) {
         int sizeA = A.length, sizeB = B.length;
         int sizeC = A.length + B.length;
@@ -31,6 +32,7 @@ public class Solution002 {
             return C[sizeC / 2];
     }
 
+    //Attempt2: 390ms
     //O(log(m+n)) solution
     public double findMedianSortedArrays(int A[], int B[]) {
         int total = A.length + B.length;
