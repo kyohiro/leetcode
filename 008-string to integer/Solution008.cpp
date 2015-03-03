@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+//Attempt1: 16ms
 class Solution008 {
 public:
   int atoi(string str) {
