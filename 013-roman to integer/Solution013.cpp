@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <map>
 
-class Solution012 {
+class Solution013 {
 //Attempt1: 85ms
 public:
   int romanToInt(string s) {
