@@ -1,4 +1,4 @@
-public class Solution017 {
+public class Solution018 {
     //Attempt1: 456ms
     public List<List<Integer>> fourSum(int[] num, int target) {
         List<List<Integer>> results = new ArrayList<List<Integer>>();
