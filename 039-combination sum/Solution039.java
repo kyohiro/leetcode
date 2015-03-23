@@ -40,4 +40,21 @@ public class Solution039 {
         return arrays;
     }
 
+    private void combinationSubSet2(int[] candidates, int start, int target, List<Integer> currentList, List<List<Integer>> result) {
+        if (target < 0)
+            return;
+        else if (target == 0) {
+            result.add(new ArrayList<Integer>(currentList));
+            return;
+        }
+
+        for (int i = start; i < candidates.length; ++i) {
+            if (i > 0 && candidates[i] == candidates[i - 1])
+                continue;
+            currentList.add(candidates[i]);
+            combinationSubSet2(candidates, i, target - candidates[i], currentList, result);
+            currentList.remove(currentList.size() - 1);
+        }
+    }
+
 }
