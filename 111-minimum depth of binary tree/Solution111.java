@@ -14,9 +14,7 @@ public class Solution111 {
             return 0;
         int da = minDepth(root.left);
         int db = minDepth(root.right);
-        if (da == 0 && db == 0)
-            return 1;
-        else if (da == 0 || db == 0)
+        if (da == 0 || db == 0)
             return da + db + 1;
         else
             return Math.min(da + 1, db + 1);
