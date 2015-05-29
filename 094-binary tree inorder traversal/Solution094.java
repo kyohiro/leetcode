@@ -7,7 +7,7 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
-public class Solution {
+public class Solution094 {
     //Attempt1: recursive
     public List<Integer> inorderTraversal(TreeNode root) {
         if (root == null) 
