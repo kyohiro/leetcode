@@ -7,7 +7,7 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
-public class Solution102 {
+public class Solution107 {
     //Attempt1: 275ms
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> results = new ArrayList<List<Integer>>();           
