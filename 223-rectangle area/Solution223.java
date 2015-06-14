@@ -6,4 +6,4 @@ public class Solution223 {
         
         return (D - B) * (C - A) + (H - F) * (G - E) - dup;
     }
-}
+ }
