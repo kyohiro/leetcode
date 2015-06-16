@@ -12,19 +12,13 @@
 public class Solution141 {
     public boolean hasCycle(ListNode head) {
         ListNode another = head;
-        if (another != null && another.next != null && another.next != null && another.next.next != null)
+        while (another != null && another.next != null) {
+            head = head.next;
             another = another.next.next;
-        else
-            return false;
-        while (head != another) {
-            if (head.next != null && another.next != null && another.next.next != null) {
-                head = head.next;
-                another = another.next.next;
-            }
-            else
-                return false;
+            if (head == another)
+                return true;
         }
         
-        return true;
+        return false;
     }
 }
